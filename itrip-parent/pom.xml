@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>cn.ekgc.itrip</groupId>
+	<groupId>com.whackon.itrip</groupId>
 	<artifactId>itrip-parent</artifactId>
 	<version>1.0.0</version>
+	<packaging>pom</packaging>
 
 	<!-- 配置项目使用Spring Boot Parent 作为父级依赖关系[BEGIN] -->
 	<parent>

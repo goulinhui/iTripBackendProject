@@ -1,6 +1,6 @@
 ### 项目启动端口号
 server:
-  port: 11111
+  port: 9999
 spring:
   application:
     name: itrip-eureka-server

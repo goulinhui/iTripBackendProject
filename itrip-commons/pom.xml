@@ -9,7 +9,7 @@
 	<!-- 配置使用itrip-parent作为项目的父级依赖关系[BEGIN] -->
 	<parent>
 		<artifactId>itrip-parent</artifactId>
-		<groupId>cn.ekgc.itrip</groupId>
+		<groupId>com.whackon.itrip</groupId>
 		<version>1.0.0</version>
 	</parent>
 	<!-- 配置使用itrip-parent作为项目的父级依赖关系[END] -->
@@ -28,6 +28,12 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<!-- 配置Spring Cloud Eureka Client 依赖关系[END]-->
+		<!-- 配置Spring Cloud OpenFeign依赖关系[BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<!-- 配置Spring Cloud OpenFeign依赖关系[END] -->
 
 		<dependency>
 			<groupId>junit</groupId>

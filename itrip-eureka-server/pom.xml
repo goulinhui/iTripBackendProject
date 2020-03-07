@@ -9,7 +9,7 @@
  <!-- 配置使用itrip-parent作为项目的父级依赖关系[BEGIN] -->
  <parent>
    <artifactId>itrip-parent</artifactId>
-   <groupId>cn.ekgc.itrip</groupId>
+   <groupId>com.whackon.itrip</groupId>
    <version>1.0.0</version>
  </parent>
   <!-- 配置使用itrip-parent作为项目的父级依赖关系[END] -->
