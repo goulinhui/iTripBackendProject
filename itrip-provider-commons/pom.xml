@@ -54,14 +54,20 @@
 		</dependency>
 		<!-- 配置Mybatis Spring Boot 依赖关系[END]-->
 
-		<!-- 配置数据库连接池Druid Spring Boot 依赖关系[BEGIN]  -->
+		<!-- 配置数据库连接池Druid Spring Boot starter依赖关系[BEGIN]  -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>${druid-spring-starter.version}</version>
 		</dependency>
-		<!-- 配置数据库连接池Druid Spring Boot 依赖关系[END]  -->
+		<!-- 配置数据库连接池Druid Spring Boot starter 依赖关系[END]  -->
 
+		<!-- 配置Spring Boot Starter Redis依赖关系[BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- 配置Spring Boot Starter Redis依赖关系[END] -->
 
 		<dependency>
 			<groupId>junit</groupId>
