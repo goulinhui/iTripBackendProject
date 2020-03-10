@@ -1,6 +1,7 @@
 package com.whackon.itrip.service;
 
 import com.whackon.itrip.pojo.entity.User;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -25,4 +26,18 @@ public interface UserService {
 	 * @throws Exception
 	 */
 	Boolean saveUser(User user)throws Exception;
+	/**
+	 * <b>通过userCode在Redis中查询对应的激活码</b>
+	 * @param userCode
+	 * @return
+	 * @throws Exception
+	 */
+	String getActiveCodeByUserCode(String userCode)throws Exception;
+	/**
+	 * <b>修改用户信息</b>
+	 * @param user
+	 * @return
+	 * @throws Exception
+	 */
+	boolean updateUser(User user) throws Exception;
 }
