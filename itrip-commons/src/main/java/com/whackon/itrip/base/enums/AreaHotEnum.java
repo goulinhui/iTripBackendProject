@@ -1,18 +1,18 @@
 package com.whackon.itrip.base.enums;
 
 /**
- * <b>用户激活状态枚举对象</b>
+ * <b>是否是热门城市枚举信息</b>
  * @author 缑林辉
  * @version 1.0.0
  * @since 1.0.0
  */
-public enum UserActivatedEnum {
-	USER_ACTIVATED_NO(0),
-	USER_ACTIVATED_YES(1)
+public enum AreaHotEnum {
+	AREA_HOT_YES(1),
+	AREA_HOT_NO(0)
 	;
 	private int code;
 
-	private UserActivatedEnum(int code) {
+	private AreaHotEnum(int code) {
 		this.code = code;
 	}
 

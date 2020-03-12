@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <b>爱旅行-用户信息业务层接口实现类</b>
- * @author Administrator
+ * @author 缑林辉
  * @version 1.0.0
  * @since 1.0.0
  */
