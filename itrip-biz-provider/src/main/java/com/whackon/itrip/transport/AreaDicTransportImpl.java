@@ -4,6 +4,7 @@ import com.whackon.itrip.pojo.entity.AreaDic;
 import com.whackon.itrip.service.AreaDicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class AreaDicTransportImpl implements AreaDicTransport {
 	 * @throws Exception
 	 */
 	@PostMapping(value = "/query")
-	public List<AreaDic> getListByQuery(AreaDic query) throws Exception {
+	public List<AreaDic> getListByQuery(@RequestBody AreaDic query) throws Exception {
 		return areaDicService.getListByQuery(query);
 	}
 }

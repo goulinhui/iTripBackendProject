@@ -1,6 +1,7 @@
 package com.whackon.itrip.dao;
 
 import com.whackon.itrip.pojo.entity.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @version 1.0.0
  * @since 1.0.0
  */
+@Repository
 public interface UserDao {
 	List<User> findListByQuery(User query) throws Exception;
 

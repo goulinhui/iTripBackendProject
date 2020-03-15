@@ -5,6 +5,7 @@ import com.whackon.itrip.pojo.entity.LabelDic;
 import com.whackon.itrip.service.LabelDicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,9 +16,9 @@ import java.util.List;
  * @version 1.0.0
  * @since 1.0.0
  */
-@RestController("labelDicTransport")
+@RestController("labelTransport")
 @RequestMapping("/label/trans")
-public class LabelDicTransportImpl implements LabelDicTransport{
+public class LabelTransportImpl implements LabelDicTransport{
 	@Autowired
 	private LabelDicService LabelDicService;
 	/**
@@ -27,7 +28,7 @@ public class LabelDicTransportImpl implements LabelDicTransport{
 	 * @throws Exception
 	 */
 	@PostMapping(value = "/query")
-	public List<LabelDic> getListByQuery(LabelDic query) throws Exception {
+	public List<LabelDic> getListByQuery(@RequestBody LabelDic query) throws Exception {
 		return LabelDicService.getListByQuery(query);
 	}
 }
