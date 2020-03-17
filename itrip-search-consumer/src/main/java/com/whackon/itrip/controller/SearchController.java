@@ -3,6 +3,7 @@ package com.whackon.itrip.controller;
 import com.whackon.itrip.base.controller.BaseController;
 import com.whackon.itrip.base.pojo.vo.ResponseDto;
 import com.whackon.itrip.pojo.entity.Hotel;
+import com.whackon.itrip.pojo.vo.HotelVo;
 import com.whackon.itrip.pojo.vo.SearchHotCityVO;
 import com.whackon.itrip.transport.HotelTransport;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class SearchController extends BaseController {
 	@PostMapping(value = "/hotellist/searchItripHotelListByHotCity")
 	public ResponseDto<Object> searchItripHotelListByHotCity(@RequestBody SearchHotCityVO queryVO)
 			throws Exception {
-		List<Hotel> hotelList = hotelTransport.searchItripHotelListByHotCity(queryVO);
+		List<HotelVo> hotelList = hotelTransport.searchItripHotelListByHotCity(queryVO);
 		return ResponseDto.success(hotelList);
 	}
 }

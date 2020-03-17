@@ -4,8 +4,10 @@ import com.whackon.itrip.base.controller.BaseController;
 import com.whackon.itrip.base.enums.AreaHotEnum;
 import com.whackon.itrip.base.pojo.vo.ResponseDto;
 import com.whackon.itrip.pojo.entity.AreaDic;
+import com.whackon.itrip.pojo.entity.Hotel;
 import com.whackon.itrip.pojo.entity.LabelDic;
 import com.whackon.itrip.transport.AreaDicTransport;
+import com.whackon.itrip.transport.HotelTransport;
 import com.whackon.itrip.transport.LabelDicTransport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,9 +27,11 @@ import java.util.List;
 @RequestMapping("/biz/api/hotel")
 public class HotelController extends BaseController {
 	@Autowired
+	private LabelDicTransport labelDicTransport;
+	@Autowired
 	private AreaDicTransport areaDicTransport;
 	@Autowired
-	private LabelDicTransport labelDicTransport;
+	private HotelTransport hotelTransport;
 	/**
 	 * <b>查询热门城市</b>
 	 * @param isChina
@@ -43,7 +47,7 @@ public class HotelController extends BaseController {
 		//设置查询条件，热门城市
 		query.setIsHot(AreaHotEnum.AREA_HOT_YES.getCode());
 
-        //查询列表
+		//查询列表
 		List<AreaDic> areaDicList = areaDicTransport.getListByQuery(query);
 		return ResponseDto.success(areaDicList);
 	}
@@ -56,6 +60,18 @@ public class HotelController extends BaseController {
 		List<LabelDic> labelDicList = labelDicTransport.getListByQuery(query);
 
 		return ResponseDto.success(labelDicList);
+	}
+
+	/**
+	 * <b>根据酒店id查询酒店特色、商圈、酒店名称（视频文字描述）</b>
+	 * @param hotelId
+	 * @return
+	 * @throws Exception
+	 */
+	@GetMapping(value = "/getVideodesc/{hotelId}")
+	public ResponseDto<Object> getVideoDesc(@PathVariable("hotelId") Long hotelId) throws Exception{
+		Hotel hotel = hotelTransport.getHotelById(hotelId);
+		return ResponseDto.success(hotel);
 	}
 }
 

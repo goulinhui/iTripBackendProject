@@ -1,6 +1,7 @@
 package com.whackon.itrip.service;
 
 import com.whackon.itrip.pojo.entity.Hotel;
+import com.whackon.itrip.pojo.vo.HotelVo;
 import com.whackon.itrip.pojo.vo.SearchHotCityVO;
 
 import java.util.List;
@@ -18,5 +19,13 @@ public interface HotelService {
 	 * @return
 	 * @throws Exception
 	 */
-	List<Hotel> searchItripHotelListByHotCity(SearchHotCityVO queryVO) throws Exception;
+	List<HotelVo> searchItripHotelListByHotCity(SearchHotCityVO queryVO) throws Exception;
+
+	/**
+	 * <b>根据主键查询对象信息</b>
+	 * @param hotelId
+	 * @return
+	 * @throws Exception
+	 */
+	Hotel getHotelById(Long hotelId) throws Exception;
 }

@@ -1,6 +1,7 @@
 package com.whackon.itrip.transport;
 
 import com.whackon.itrip.pojo.entity.Hotel;
+import com.whackon.itrip.pojo.vo.HotelVo;
 import com.whackon.itrip.pojo.vo.SearchHotCityVO;
 import com.whackon.itrip.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,19 @@ public class HotelTransportImpl implements HotelTransport {
 	 * @throws Exception
 	 */
 	@PostMapping(value = "/searchItripHotelListByHotCity")
-	public List<Hotel> searchItripHotelListByHotCity(@RequestBody SearchHotCityVO queryVO)
+	public List<HotelVo> searchItripHotelListByHotCity(@RequestBody SearchHotCityVO queryVO)
 			throws Exception {
 		return hotelService.searchItripHotelListByHotCity(queryVO);
+	}
+
+	/**
+	 *  <b>根据主键查询对象信息</b>
+	 * @param hotelId
+	 * @return
+	 * @throws Exception
+	 */
+	@PostMapping(value = "/id")
+	public Hotel getHotelById(Long hotelId) throws Exception {
+		return hotelService.getHotelById(hotelId);
 	}
 }

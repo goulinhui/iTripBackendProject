@@ -1,6 +1,7 @@
 package com.whackon.itrip.dao;
 
 import com.whackon.itrip.pojo.entity.Hotel;
+import com.whackon.itrip.pojo.entity.HotelRoom;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
