@@ -1,6 +1,7 @@
 package com.whackon.itrip.dao;
 
 import com.whackon.itrip.pojo.entity.User;
+import com.whackon.itrip.pojo.entity.UserLinkUser;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -30,4 +31,6 @@ public interface UserDao {
 	 * @throws Exception
 	 */
 	int updateUser(User user) throws Exception;
+
+
 }

@@ -2,6 +2,7 @@ package com.whackon.itrip.service;
 
 import com.whackon.itrip.pojo.entity.Hotel;
 import com.whackon.itrip.pojo.vo.HotelVo;
+import com.whackon.itrip.pojo.vo.RoomStoreVO;
 import com.whackon.itrip.pojo.vo.SearchHotCityVO;
 
 import java.util.List;
@@ -28,4 +29,6 @@ public interface HotelService {
 	 * @throws Exception
 	 */
 	Hotel getHotelById(Long hotelId) throws Exception;
+
+
 }

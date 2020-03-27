@@ -1,7 +1,7 @@
 package com.whackon.itrip.dao;
 
 import com.whackon.itrip.pojo.entity.HotelRoom;
-
+import com.whackon.itrip.pojo.vo.SearchHotelRoomVO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * <b>爱旅行-酒店房间功能数据持久层接口</b>
- * @author 缑林辉
+ * @author Arthur
  * @version 1.0.0
  * @since 1.0.0
  */

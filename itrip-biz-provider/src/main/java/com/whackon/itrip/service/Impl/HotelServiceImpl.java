@@ -5,6 +5,7 @@ import com.whackon.itrip.dao.HotelDao;
 import com.whackon.itrip.pojo.entity.Hotel;
 import com.whackon.itrip.pojo.entity.HotelRoom;
 import com.whackon.itrip.pojo.vo.HotelVo;
+import com.whackon.itrip.pojo.vo.RoomStoreVO;
 import com.whackon.itrip.pojo.vo.SearchHotCityVO;
 import com.whackon.itrip.service.HotelService;
 import org.apache.solr.client.solrj.SolrClient;
@@ -70,4 +71,7 @@ public class HotelServiceImpl implements HotelService {
 		}
 		return new Hotel();
 	}
+
+
+
 }

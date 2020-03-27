@@ -4,20 +4,18 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * <b>系统字典信息实体类</b>
- * @author 缑林辉
+ * <b>爱旅行-图片信息实体对象</b>
+ * @author Arthur
  * @version 1.0.0
  * @since 1.0.0
  */
-public class LabelDic implements Serializable {
+public class ItripImage implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
-	private String name;
-	private String value;
-	private String description;
-	private Long parentId;
-	private String pic;
-	private Long hotelId;
+	private String type;
+	private Long targetId;
+	private Integer position;
+	private String imgUrl;
 	private Date creationDate;
 	private Long createdBy;
 	private Date modifyDate;
@@ -31,52 +29,36 @@ public class LabelDic implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getType() {
+		return type;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setType(String type) {
+		this.type = type;
 	}
 
-	public String getValue() {
-		return value;
+	public Long getTargetId() {
+		return targetId;
 	}
 
-	public void setValue(String value) {
-		this.value = value;
+	public void setTargetId(Long targetId) {
+		this.targetId = targetId;
 	}
 
-	public String getDescription() {
-		return description;
+	public Integer getPosition() {
+		return position;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setPosition(Integer position) {
+		this.position = position;
 	}
 
-	public Long getParentId() {
-		return parentId;
+	public String getImgUrl() {
+		return imgUrl;
 	}
 
-	public void setParentId(Long parentId) {
-		this.parentId = parentId;
-	}
-
-	public String getPic() {
-		return pic;
-	}
-
-	public void setPic(String pic) {
-		this.pic = pic;
-	}
-
-	public Long getHotelId() {
-		return hotelId;
-	}
-
-	public void setHotelId(Long hotelId) {
-		this.hotelId = hotelId;
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 
 	public Date getCreationDate() {
